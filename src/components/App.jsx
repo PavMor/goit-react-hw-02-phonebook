@@ -22,7 +22,7 @@ class App extends Component {
 
   handleCheckUnique = name => {
     const { contacts } = this.state;
-    const isExistContact = !!contacts.find(contact => contact.name === name);
+    const isExistContact = !!contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase());
 
     isExistContact && alert(`${name} is already in contacts`);
 
